@@ -24,6 +24,7 @@
 
 # STUDENTI
 - id (PK INT AUTO_INCREMENT)
+- id_corso (FK)
 - nome (VARCHAR(30) NOTNULL)
 - cognome (VARCHAR(20) NOTNULL)
 - email (VARCHAR(50) NOTNULL)
