@@ -56,4 +56,9 @@ WHERE
 
 7. Da quanti dipartimenti è composta l'università? (12)
 
+SELECT 
+    COUNT(id)
+FROM
+    departments;
+
 8. Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
