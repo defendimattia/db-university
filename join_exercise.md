@@ -30,5 +30,12 @@ INNER JOIN `departments` ON `degrees`.`department_id` = `departments`.`id`
 ORDER BY `students`.`surname`, `students`.`name`;
 
 ## 5. Selezionare tutti i corsi di laurea con i relativi corsi e insegnanti
+
+SELECT `courses`.`name` AS `course_name`, `degrees`.`name` AS `degree_name`, `teachers`.`name` AS `teacher_name`, `teachers`.`surname` AS `teacher_surname`
+FROM `course_teacher`
+INNER JOIN `courses` ON `course_id` = `courses`.`id`
+INNER JOIN `degrees` ON `courses`.`degree_id` = `degrees`.`id`
+INNER JOIN `teachers` ON `teacher_id` = `teachers`.`id`;
+
 ## 6. Selezionare tutti i docenti che insegnano nel Dipartimento di Matematica (54)
 ## 7. BONUS: Selezionare per ogni studente il numero di tentativi sostenuti per ogni esame, stampando anche il voto massimo. Successivamente, filtrare i tentativi con voto minimo 18.
